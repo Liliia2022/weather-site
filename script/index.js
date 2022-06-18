@@ -45,7 +45,7 @@ function searchCity(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#city-input").value;
+  let city = document.querySelector("#enter-city").value;
   searchCity(city);
 }
 
@@ -83,4 +83,4 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("New York");
+searchCity("Amsterdam");

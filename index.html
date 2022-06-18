@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Weather</title>
+    <title>Parcel Sandbox</title>
     <meta charset="UTF-8" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital@0;1&display=swap" rel="stylesheet">
    
@@ -13,12 +13,12 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-
     <script
       src="https://kit.fontawesome.com/3ae9430295.js"
       crossorigin="anonymous"
     ></script>
-     <link rel="stylesheet" href="style/style.css">
+    <link href="style/style.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
 
   <body>
@@ -43,18 +43,15 @@
   </br>
   <div class="container">
       <div class="row">
-        <div class="col-2">
-            <form>
-                <input type="search" placeholder="Enter city" />
+        <div class="col-4">
+            <form id="search-form">
+                <input type="search" placeholder="Enter city" id="enter-city"/>
+                <input type="submit" value="SEARCH" class="search">
               </form>
         </div>
+      
         <div class="col-2">
-          <button class="search">
-            SEARCH
-          </button>
-        </div>
-        <div class="col-2">
-            <button class="current">
+            <button class="current" id="current-location-button">
                 CURRENT
               </button>
         </div>      
@@ -66,13 +63,13 @@
   <div class="container">
       <div class="row">
         <div class="col-3">
-            <h1> 
+            <h1 id="city"> 
                 Barcelona
                   </h1>
-                <h2>
+                <h2 id="date">
                   Friday 15:00
                 </h2>
-                <h3>
+                <h3 id="description">
                   Cloud and sun
                 </h3>
         </div>
@@ -80,11 +77,13 @@
             <i class="fa-solid fa-cloud-sun main"></i>
         </div>     
         <div class="col-3">
-         <h4>22°C</h4> 
+         <h4> <span class="temperature" id="temperature">19°</span>
+        </h4> 
         </div>
-        <div class="col-3 precipitation">
-            Precipitation: 33%
-        <div>
+        <div class="col-3 otherDetails">
+          <div  id="humidity"> Humidity: 33%
+          </div>
+        <div id="wind">
             Wind: 4km/h
         </div>
     </div> 
@@ -154,6 +153,6 @@
         </div>
       </div>
    
-    <script src="script/index.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
