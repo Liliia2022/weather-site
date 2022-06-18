@@ -25,14 +25,12 @@ function formatDate(date) {
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
-    response.data.main.temp
-  );
-
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
+  let temperatura = Math.round(response.data.main.temp);
+  document.querySelector("#temperature").innerHTML = `${temperatura}°C`;
+  let humidity = response.data.main.humidity;
+  document.querySelector("#humidity").innerHTML = `Humidity: ${humidity}%`;
+  let wind = Math.round(response.data.wind.speed);
+  document.querySelector("#wind").innerHTML = `Wind: ${wind}km/h`;
   document.querySelector("#description").innerHTML =
     response.data.weather[0].main;
 }
