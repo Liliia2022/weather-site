@@ -69,9 +69,11 @@ h3 {
 .temperature {
   text-align: center;
   font-family: "Merriweather Sans", sans-serif;
-  font-size: 100px;
+  font-size: 130px;
   font-weight: bold;
   color: #8dbe54;
+  position: relative;
+  top: -40px;
 }
 .otherDetails {
   padding: 30px 30px 30px 80px;
@@ -146,4 +148,13 @@ footer {
   margin-top: 50px;
   font-family: "Merriweather Sans", sans-serif;
   color: rgb(126, 125, 125);
+}
+.units {
+  top: -32px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 25px;
+  color: rgb(126, 125, 125);
+  margin-left: 10px;
+  position: relative;
+  top: -115px;
 }
