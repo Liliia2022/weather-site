@@ -26,7 +26,7 @@ function formatDate(date) {
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   let temperatura = Math.round(response.data.main.temp);
-  document.querySelector("#temperature").innerHTML = `${temperatura}°C`;
+  document.querySelector("#temperature").innerHTML = `${temperatura}`;
   let humidity = response.data.main.humidity;
   document.querySelector("#humidity").innerHTML = `Humidity: ${humidity}%`;
   let wind = Math.round(response.data.wind.speed);
