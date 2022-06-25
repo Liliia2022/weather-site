@@ -42,14 +42,12 @@ function displayWeatherCondition(response) {
   function displayFahrenheitTemperature(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
-
     let fahrenheiTemperature = (temperatura * 9) / 5 + 32;
     temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
   }
 
   function displayCelsiusTemperature(event) {
     event.preventDefault();
-
     let temperatureElement = document.querySelector("#temperature");
     temperatureElement.innerHTML = Math.round(temperatura);
   }
@@ -72,6 +70,26 @@ function handleSubmit(event) {
   searchCity(city);
 }
 
+function askingLondon(event) {
+  event.preventDefault();
+  searchCity("London");
+}
+
+function askingNewYork(event) {
+  event.preventDefault();
+  searchCity("New York");
+}
+
+function askingAmsterdam(event) {
+  event.preventDefault();
+  searchCity("Amsterdam");
+}
+
+function askingKyiv(event) {
+  event.preventDefault();
+  searchCity("Kyiv");
+}
+
 function searchLocation(position) {
   let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`;
@@ -87,6 +105,18 @@ function getCurrentLocation(event) {
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 dateElement.innerHTML = formatDate(currentTime);
+
+let londonLink = document.querySelector("#london-link");
+londonLink.addEventListener("click", askingLondon);
+
+let newYorkLink = document.querySelector("#newYork-link");
+newYorkLink.addEventListener("click", askingNewYork);
+
+let amsterdamLink = document.querySelector("#amsterdam-link");
+amsterdamLink.addEventListener("click", askingAmsterdam);
+
+let kyivLink = document.querySelector("#kyiv-link");
+kyivLink.addEventListener("click", askingKyiv);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
