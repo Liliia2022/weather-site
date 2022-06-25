@@ -145,7 +145,7 @@ h3 {
 }
 footer {
   margin-left: 50px;
-  margin-top: 50px;
+  margin-top: 15px;
   font-family: "Merriweather Sans", sans-serif;
   color: rgb(126, 125, 125);
 }
@@ -157,4 +157,10 @@ footer {
   margin-left: 10px;
   position: relative;
   top: -115px;
+}
+.icon {
+  position: relative;
+  top: -70px;
+  left: 0px;
+  width: 250px;
 }
