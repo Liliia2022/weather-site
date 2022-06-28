@@ -94,12 +94,15 @@ h3 {
   color: #8dbe54;
   position: relative;
   top: -40px;
+  left: 20px;
 }
 .otherDetails {
   padding: 30px 30px 30px 80px;
   color: rgb(126, 125, 125);
   font-style: italic;
   font-size: 18px;
+  position: relative;
+  left: 10px;
 }
 .sat,
 .sun,
@@ -131,17 +134,16 @@ h3 {
   background-color: #cd91d7;
 }
 footer {
-  margin-left: 50px;
-  margin-top: 15px;
+  margin-left: 25px;
+  margin-top: 20px;
   color: rgb(126, 125, 125);
 }
 .units {
-  top: -32px;
   font-size: 25px;
   color: rgb(126, 125, 125);
-  margin-left: 10px;
   position: relative;
   top: -115px;
+  left: 50px;
 }
 .icon {
   position: relative;
