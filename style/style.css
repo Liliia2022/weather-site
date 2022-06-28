@@ -1,6 +1,30 @@
-.col-1 {
-  color: blue;
-  text-align: center;
+body {
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+.weather-wrapper {
+  max-width: 100%;
+  margin: 30px auto;
+}
+.weather {
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+}
+.london,
+.newYork,
+.amsterdam,
+.kyiv {
+  text-align: left;
+}
+.newYork {
+  margin-left: -40px;
+}
+.kyiv {
+  margin-left: -20px;
+}
+.amsterdam {
+  margin-left: -55px;
 }
 .search {
   margin-left: 30px;
@@ -19,7 +43,7 @@
   font-weight: 500;
 }
 .current {
-  margin-left: 0px;
+  margin-left: -140px;
   padding: 3px 20px 3px 20px;
   color: white;
   background-color: #8dbe54;
@@ -38,14 +62,12 @@ h1 {
   background-color: #ee6666;
   color: white;
   text-align: center;
-  font-family: "Merriweather Sans", sans-serif;
   border-radius: 3px;
   font-weight: bold;
 }
 h2 {
   text-align: center;
   background-color: rgb(238, 238, 238);
-  font-family: "Merriweather Sans", sans-serif;
   font-style: italic;
   font-size: 25px;
   border-radius: 3px;
@@ -55,7 +77,6 @@ h2 {
 }
 h3 {
   text-align: center;
-  font-family: "Merriweather Sans", sans-serif;
   font-size: 20px;
   font-weight: bold;
   color: rgb(190, 189, 189);
@@ -68,7 +89,6 @@ h3 {
 }
 .temperature {
   text-align: center;
-  font-family: "Merriweather Sans", sans-serif;
   font-size: 130px;
   font-weight: bold;
   color: #8dbe54;
@@ -78,80 +98,45 @@ h3 {
 .otherDetails {
   padding: 30px 30px 30px 80px;
   color: rgb(126, 125, 125);
-  font-family: "Merriweather Sans", sans-serif;
   font-style: italic;
   font-size: 18px;
 }
-.sat {
+.sat,
+.sun,
+.mon,
+.tue,
+.wed {
   color: white;
   background-color: rgb(245, 238, 105);
   text-align: center;
+  margin-top: -80px;
   margin-left: 20px;
   margin-right: 20px;
   padding: 10px 30px;
-  font-family: "Merriweather Sans", sans-serif;
   font-size: 25px;
   font-weight: bold;
   border-radius: 5px;
 }
 .sun {
-  color: white;
   background-color: rgb(189, 224, 149);
-  text-align: center;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 10px 30px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 25px;
-  font-weight: bold;
-  border-radius: 5px;
 }
 .mon {
-  color: white;
   background-color: #76d1cb;
-  text-align: center;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 10px 30px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 25px;
-  font-weight: bold;
-  border-radius: 5px;
 }
 
 .tue {
-  color: white;
   background-color: rgb(81, 143, 190);
-  text-align: center;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 10px 30px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 25px;
-  font-weight: bold;
-  border-radius: 5px;
 }
 .wed {
-  color: white;
   background-color: #cd91d7;
-  text-align: center;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 10px 30px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 25px;
-  font-weight: bold;
-  border-radius: 5px;
 }
 footer {
   margin-left: 50px;
   margin-top: 15px;
-  font-family: "Merriweather Sans", sans-serif;
   color: rgb(126, 125, 125);
 }
 .units {
   top: -32px;
-  font-family: "Merriweather Sans", sans-serif;
   font-size: 25px;
   color: rgb(126, 125, 125);
   margin-left: 10px;

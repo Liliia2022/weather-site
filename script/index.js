@@ -22,6 +22,31 @@ function formatDate(date) {
 
   return `${day} ${hours}:${minutes}`;
 }
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+      <div class="sun">
+                ${day}
+                <div>
+                    <i class="fa-solid fa-sun"></i> 
+                </div>
+                <div>
+                    24°C
+                </div>
+              </div>
+            </div> `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -125,3 +150,4 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Barcelona");
+displayForecast();

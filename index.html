@@ -22,40 +22,45 @@
   </head>
 
   <body>
-  </br>
-    <div class="container">
+ 
+   <div class="container">
+     <div class="weather-wrapper">
+       <div class="weather">
+   <div class="container">
       <div class="row">
-        <div class="col-1">
+        <div class="col-2 london">
          <a href="#" id="london-link">London</a>  
         </div>
-        <div class="col-1">
+        <div class="col-2 newYork">
           <a href="#" id="newYork-link">New York</a>  
         </div>
-        <div class="col-1">
-          <a href="#" id="amsterdam-link">Amsterdam</a>
-        </div>
-        <div class="col-1">
+       <div class="col-2 kyiv">
           <a href="#" id="kyiv-link">Kyiv</a>
         </div>
-        <div class="col-8"></div>
+        <div class="col-2 amsterdam">
+          <a href="#" id="amsterdam-link">Amsterdam</a>
+        </div>
+     
+       
       </div>
     </div>
+    
   </br>
   <div class="container">
       <div class="row">
-        <div class="col-4">
+        <div class="col-6">
             <form id="search-form">
                 <input type="search" placeholder="Enter city" id="enter-city" autocomplete="off"/>
                 <input type="submit" value="SEARCH" class="search">
               </form>
         </div>
       
-        <div class="col-2">
+        <div class="col-4">
             <button class="current" id="current-location-button">
                 CURRENT
               </button>
         </div>      
-        <div class="col-6"></div>
+    
       </div>
     </div>
   </br>
@@ -92,13 +97,13 @@
     </div> 
       </div>
     </div>
- 
-
-      </body>
-      <br />
-   <footer>
+    <div class="weather-forecast" id="forecast"></div>
+     <footer>
     <a href="https://github.com/Liliia2022/weather-site" target="_blank">Open-source code</a> by Liliia Bila
    </footer>
     <script src="script/index.js"></script>
+    </div>
+    </div>
+  
   </body>
 </html>
