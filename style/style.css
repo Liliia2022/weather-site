@@ -6,11 +6,13 @@ body {
   max-width: 100%;
   margin: 30px auto;
 }
+
 .weather {
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 5px;
 }
+
 .london,
 .newYork,
 .amsterdam,
@@ -94,7 +96,6 @@ h3 {
   color: #8dbe54;
   position: relative;
   top: -40px;
-  left: 20px;
 }
 .otherDetails {
   padding: 30px 30px 30px 80px;
@@ -104,13 +105,14 @@ h3 {
   position: relative;
   left: 10px;
 }
-.sat,
-.sun,
-.mon,
-.tue,
-.wed {
+.SUN,
+.MON,
+.TUE,
+.WED,
+.THU,
+.FRI,
+.SAT {
   color: white;
-  background-color: rgb(245, 238, 105);
   text-align: center;
   margin-top: -80px;
   margin-left: 20px;
@@ -120,19 +122,30 @@ h3 {
   font-weight: bold;
   border-radius: 5px;
 }
-.sun {
+.SUN {
+  background-color: rgb(245, 238, 105);
+}
+.MON {
   background-color: rgb(189, 224, 149);
 }
-.mon {
+.TUE {
   background-color: #76d1cb;
 }
 
-.tue {
+.WED {
   background-color: rgb(81, 143, 190);
 }
-.wed {
-  background-color: #cd91d7;
+.THU {
+  background-color: #d1b9d6;
 }
+
+.FRI {
+  background-color: #f88787;
+}
+.SAT {
+  background-color: #ffd3b4;
+}
+
 footer {
   margin-left: 25px;
   margin-top: 20px;
@@ -143,11 +156,13 @@ footer {
   color: rgb(126, 125, 125);
   position: relative;
   top: -115px;
-  left: 50px;
+  left: 30px;
 }
 .icon {
   position: relative;
   top: -70px;
   left: 0px;
   width: 250px;
+  max-width: 100%;
+  display: block;
 }

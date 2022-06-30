@@ -22,30 +22,52 @@ function formatDate(date) {
 
   return `${day} ${hours}:${minutes}`;
 }
+
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+
+  return days[day];
+}
+
 function displayForecast(response) {
+  let forecast = response.data.daily;
+
   let forecastElement = document.querySelector("#forecast");
 
-  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
-
   let forecastHTML = `<div class="row">`;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<div class="col-2">
-      <div class="sun">
-                ${day}
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `<div class="col-2">
+      <div class="${formatDay(forecastDay.dt)}">
+                ${formatDay(forecastDay.dt)}
                 <div>
-                    <i class="fa-solid fa-sun"></i> 
+      <img src="http://openweathermap.org/img/wn/${
+        forecastDay.weather[0].icon
+      }@2x.png"
+          alt=""
+          width="42"
+        />
                 </div>
                 <div>
-                    24°C
+       ${Math.round(forecastDay.temp.max)}°
                 </div>
               </div>
             </div> `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
+}
+
+function getForecast(coordinates) {
+  let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function displayWeatherCondition(response) {
@@ -63,6 +85,7 @@ function displayWeatherCondition(response) {
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
+  getForecast(response.data.coord);
 
   function displayFahrenheitTemperature(event) {
     event.preventDefault();
@@ -150,4 +173,3 @@ let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
 searchCity("Barcelona");
-displayForecast();
