@@ -73,7 +73,7 @@ function getForecast(coordinates) {
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
   let temperatura = Math.round(response.data.main.temp);
-  document.querySelector("#temperature").innerHTML = `${temperatura}`;
+  document.querySelector("#temperature").innerHTML = `${temperatura}°C`;
   let humidity = response.data.main.humidity;
   document.querySelector("#humidity").innerHTML = `Humidity: ${humidity}%`;
   let wind = Math.round(response.data.wind.speed);
@@ -86,24 +86,6 @@ function displayWeatherCondition(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   getForecast(response.data.coord);
-
-  function displayFahrenheitTemperature(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    let fahrenheiTemperature = (temperatura * 9) / 5 + 32;
-    temperatureElement.innerHTML = Math.round(fahrenheiTemperature);
-  }
-
-  function displayCelsiusTemperature(event) {
-    event.preventDefault();
-    let temperatureElement = document.querySelector("#temperature");
-    temperatureElement.innerHTML = Math.round(temperatura);
-  }
-  let fahrenheitLink = document.querySelector("#fahrenheit-link");
-  fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-  let celsiusLink = document.querySelector("#celsius-link");
-  celsiusLink.addEventListener("click", displayCelsiusTemperature);
 }
 
 function searchCity(city) {
