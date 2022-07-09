@@ -83,12 +83,7 @@ h3 {
   font-weight: bold;
   color: rgb(190, 189, 189);
 }
-.main {
-  position: relative;
-  left: 80px;
-  font-size: 110px;
-  color: rgb(172, 172, 172);
-}
+
 .temperature {
   text-align: center;
   font-size: 130px;
@@ -151,13 +146,7 @@ footer {
   margin-top: 20px;
   color: rgb(126, 125, 125);
 }
-.units {
-  font-size: 25px;
-  color: rgb(126, 125, 125);
-  position: relative;
-  top: -115px;
-  left: 30px;
-}
+
 .icon {
   position: relative;
   top: -70px;
